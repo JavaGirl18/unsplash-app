@@ -11,14 +11,14 @@ var usersRouter = require('./routes/users');
 var app = express();
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
-const connection = mongoose.connection;
-connection.on('connected', () => {
-  console.log('Mongoose Connected Successfully');
-});
-// If the connection throws an error
-connection.on('error', (err) => {
-  console.log('Mongoose default connection error: ' + err);
-});
+// const connection = mongoose.connection;
+// connection.on('connected', () => {
+//   console.log('Mongoose Connected Successfully');
+// });
+// // If the connection throws an error
+// connection.on('error', (err) => {
+//   console.log('Mongoose default connection error: ' + err);
+// });
 
 
 app.use(logger('dev'));
